@@ -18,21 +18,33 @@
 
   .modal {
       position: absolute;
-      top: 50%;
+      top: 93px;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-
-      width: 528px;
-      min-height: 581px;
+      max-width: 450px;
+      max-height: 609px;
+      transform: translateX(-50%) translateY(-45px);
+      margin: auto;
       padding: 40px;
 
       background-color: var(--background-color);
-
       border-radius: 4px;
       box-shadow: var(--card-shadow);
 
       transition: transform var(--animation), opacity var(--animation);
 
+      @media screen and (min-width: 768px) {
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+      }
+
+      @media screen and (min-width: 1200px) {
+          top: 50%;
+          left: 50%;
+          width: 528px;
+          min-height: 581px;
+          transform: translateX(-50%) translateY(-50%);
+      }
   }
 
   .backdrop.is-hidden .modal {
@@ -56,13 +68,13 @@
       cursor: pointer;
       transition: color var(--animation);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+      &:hover,
+      &:focus {
+          color: var(--accent-color);
+      }
   }
 
-  
+
 
   .modal__icon {
       fill: currentColor;
@@ -74,7 +86,11 @@
       margin-bottom: 12px;
       font-weight: 700;
       font-size: 20px;
-      line-height: calc(23/20);
+      line-height: calc(30/20);
+
+      @media screen and (min-width: 1200px) {
+          line-height: calc(23/20);
+      }
 
   }
 
@@ -150,11 +166,10 @@
   }
 
   .modal-form__agreement {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+      text-align: center;
       margin-bottom: 30px;
-      gap: 10px;
+
       color: rgba(117, 117, 117, 1);
       user-select: none;
 
@@ -162,8 +177,17 @@
   }
 
   .modal-form__link {
+
+      font-size: 12px;
+      line-height: calc(14/12);
       color: var(--accent-color);
       text-underline-offset: 3px;
+
+      @media screen and (min-width: 1200px) {
+
+          font-size: 14px;
+          line-height: calc(24/14);
+      }
 
   }
 
@@ -189,19 +213,20 @@
 
       transition: background-color var(--animation);
 
-    &:hover,
-    &:focus {
-        background-color: #188CE8;
-        }
+      &:hover,
+      &:focus {
+          background-color: #188CE8;
+      }
   }
 
- 
+
 
   .modal-form__image {
       display: inline-block;
       border: 2px solid rgba(33, 33, 33, 1);
       width: 16px;
       height: 15px;
+      margin-right: 8px;
   }
 
   .modal-form__checkbox:checked+.modal-form__image {
