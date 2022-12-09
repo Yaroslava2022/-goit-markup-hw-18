@@ -4,39 +4,82 @@
     padding-bottom: 60px;
 
     &__container {
-        display: flex;
-        align-items: baseline;
+        display: block;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: baseline;
         }
-    
+    }
+
+    &__box {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+
+
+
+    }
+
     &__contacts {
-        margin-right: 70px;
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: 1200px) {
+            margin-right: 70px;
+            margin-bottom: 0;
         }
-        
+    }
+
+    &__socials {
+        @media screen and (max-width: 767px) {
+
+            margin-bottom: 60px;
+        }
+    }
+
     &__address {
         margin-top: 20px;
         font-style: normal;
         line-height: calc(24/14);
-    
+
         color: var(--secondary-title-color);
-        }
-    
+    }
+
     &__item:not(:last-child) {
         margin-bottom: 9px;
-        }
-    
+    }
+
     &__title {
-    
+
+        text-align: center;
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
         line-height: calc(16/14);
         text-transform: uppercase;
         color: var(--background-color);
+
+        @media screen and (min-width: 1200px) {
+            text-align: start;
         }
-    
+    }
+
     &__subscription {
+        display: block;
+        margin-right: auto;
         margin-left: auto;
+        max-width: 450px;
+
+
+        @media screen and (min-width: 1200px) {
+            margin-right: 0;
+            margin-left: 93px;
         }
+    }
 }
 
 .footer__mail,
@@ -63,10 +106,22 @@
 .logo__footer {
     color: var(--secondary-title-color);
 }
+
 .footer__button {
 
     display: flex;
     gap: 10px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     padding: 10px 28px;
     justify-content: center;
     align-items: center;
@@ -83,7 +138,10 @@
     color: var(--background-color);
     background-color: var(--accent-color);
     transition: background-color var(--animation);
-    ;
+
+    @media screen and (min-width: 1200px) {
+        min-width: 200px;
+    }
 
     &:hover {
         background-color: #188CE8;
@@ -94,49 +152,54 @@
 
 .socials-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
     gap: 10px;
     width: 206px;
     color: var(--background-color);
 
+
     &__icon {
         fill: currentColor;
     }
+
     &__item {
         width: 44px;
         height: 44px;
     }
-    
+
     &__link {
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
         border-radius: 50%;
-    
+
         background-color: rgba(255, 255, 255, 0.1);
         color: var(--background-color);
-    
+
         transition: color var(--animation),
-        background-color var(--animation);
-    
-            &:hover,
-            &:focus {
-                background-color: var(--accent-color);
-                color: var(--background-color);
-            }
+            background-color var(--animation);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+            color: var(--background-color);
         }
+    }
 }
 
 
 
 .booking__group {
-    display: flex;
-    gap: 12px;
-    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
 }
 
 .booking__label {
@@ -163,4 +226,3 @@
         border: 1px solid var(--accent-color);
     }
 }
-
