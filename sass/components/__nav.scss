@@ -1,17 +1,21 @@
 .nav {
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
     &__list {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
         @extend %list;
         display: flex;
     }
-    
+
     &__item:not(:last-child) {
         margin-right: 50px;
     }
-    
+
     &__list .link {
         display: block;
         padding-top: 32px;

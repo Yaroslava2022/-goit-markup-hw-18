@@ -14,8 +14,7 @@
     </head>
 <body>
     <!--Header-->
-    <!--
-  <header class="header">
+     <header class="header">
     <div class="container header__container">
     <nav class="nav">
                 <a class="logo logo__link" href="#" lang="en">Web<span class="logo__header">Studio</span> </a>
@@ -42,10 +41,14 @@
             </svg>
             +38 096 111 11 11</a></li>
     </ul>
-   
+        <button class="menu__toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 20 20">
+                <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+        </button>
     </div>
   </header>  
--->
+
   <main>
     
     <!--Hero-->
@@ -496,6 +499,45 @@
         </form>
         </div>
 </div>
+<!--Мобільне меню-->
+<div class="menu__container menu js-menu-container" id="mobile-menu">
+    <button class="menu__toggle js-close-menu">
+        <svg class="menu__toggle-icon" fill="currentColor" width="24" height="24" viewBox="0 0 20 20">
+            <use href="./images/icons.svg#icon-close-2"></use>
+        </svg>
+    </button>
+
+    <ul class="mobile__menu list">
+        <li class="mobile__menu-item">
+            <a href="./index.html" class="mobile__menu-link--current link">Студія</a>
+        </li>
+        <li class="mobile__menu-item">
+            <a href="./portfolio.html" class="mobile__menu-link link">Портфоліо</a>
+        </li>
+        <li class="mobile__menu-item">
+            <a href="#" class="mobile__menu-link link">Контакти</a>
+        </li>
+    </ul>
+    <ul class="mobile__contacts list">
+        <li class="mobile__contacts-item"><a href="tel:+380961111111" class="mobile__contacts-tel link">+38 096 111 11
+                11</a></li>
+        <li class="mobile__contacts-item"><a href="mailto:info@devstudio.com"
+                class="mobile__contacts-email link">info@devstudio.com</a></li>
+    </ul>
+    <ul class="mobile__socials list">
+        <li class="mobile__socials-item"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="instagram icon" class="mobile__socials-link link">Instagram</a></li>
+        <li class="mobile__socials-item"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="twitter icon" class="mobile__socials-link link">Twitter</a></li>
+        <li class="mobile__socials-item"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="facebook icon" class="mobile__socials-link link">Facebook</a></li>
+        <li class="mobile__socials-item"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="linkedin icon" class="mobile__socials-link link">LinkedIn</a></li>
+    </ul>
+</div>
+
+
 <script src="./js/modal.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="js/mobile-menu.js"></script>
 </body>
+
 </html>
